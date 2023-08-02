@@ -1,6 +1,6 @@
 function MarqueeText() {
   return (
-    <div className='relative flex overflow-hidden bg-yellow-700'>
+    <div className='relative flex overflow-hidden bg-brown-500'>
       <div className='animate-marquee whitespace-nowrap'>
         <span className='mx-4 text-sm font-bold text-white'>
           Legal representation you can trust. Contact us today to schedule a consultation and start
