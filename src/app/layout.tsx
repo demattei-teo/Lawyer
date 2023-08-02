@@ -8,7 +8,7 @@ interface Props {
 function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body>
+      <body className='2xl:mx-auto 2xl:max-w-screen-2xl'>
         <MarqueeText />
         {children}
       </body>

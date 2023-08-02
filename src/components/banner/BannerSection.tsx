@@ -1,4 +1,4 @@
-import { bannerBlurDataURL, bannerPhotoURL } from '@/constants'
+import { bannerPhotoURL, brownBlurDataURL } from '@/constants'
 import Image from 'next/image'
 import Button from '../button/Button'
 
@@ -10,14 +10,14 @@ function BannerSection() {
         alt='Lawyer banner'
         fill
         priority
-        blurDataURL={bannerBlurDataURL}
+        blurDataURL={brownBlurDataURL}
         placeholder='blur'
         className='-z-10 object-cover object-center'
       />
       <h1 className='text-fluid-3xl font-extrabold text-white sm:w-1/2'>
         Your Legal Needs, Our Expertise
       </h1>
-      <Button>Get Legal Help Now</Button>
+      <Button sizes='xl'>Get Legal Help Now</Button>
     </section>
   )
 }
