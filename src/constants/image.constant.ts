@@ -6,3 +6,12 @@ export const bannerPhotoURL =
 
 export const welcomePhotoURL =
   'https://res.cloudinary.com/dos3i5jqy/image/upload/v1691014095/images/welcome_almcnu.webp'
+
+export const ctaPhotoURL =
+  'https://res.cloudinary.com/dos3i5jqy/image/upload/v1691017309/images/cta_xdzf7d.webp'
+
+export const cta2PhotoURL =
+  'https://res.cloudinary.com/dos3i5jqy/image/upload/v1691017309/images/cta2_borlfe.webp'
+
+export const cta3PhotoURL =
+  'https://res.cloudinary.com/dos3i5jqy/image/upload/v1691017309/images/cta3_wngby5.webp'
