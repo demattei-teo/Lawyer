@@ -1,4 +1,4 @@
-import { MarqueeText } from '@/components'
+import { Header, MarqueeText } from '@/components'
 import '@/styles/globals.css'
 
 interface Props {
@@ -10,6 +10,7 @@ function RootLayout({ children }: Props) {
     <html lang='en'>
       <body className='2xl:mx-auto 2xl:max-w-screen-2xl'>
         <MarqueeText />
+        <Header />
         {children}
       </body>
     </html>
