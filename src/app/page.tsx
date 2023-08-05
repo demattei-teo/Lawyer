@@ -5,12 +5,14 @@ function HomePage() {
   return (
     <main>
       <BannerSection />
-      <ContLawCard>
-        <LawCard categoryLaw='FAMILY LAW' imageAlt='family law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/family-law_uhqiuv.png' />
-        <LawCard categoryLaw='EMPLOYMENT LAW' imageAlt='employment law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/personal-injury-law_hwmvya.png' />
-        <LawCard categoryLaw='PERSONAL INJURY LAW' imageAlt='personal injury law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/employment-law_h2np1d.png' />
-      </ContLawCard>
-      <WelcomeSection />
+      <div className='welcome-background bg-cover'>
+        <ContLawCard>
+          <LawCard categoryLaw='FAMILY LAW' imageAlt='family law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/family-law_uhqiuv.png' />
+          <LawCard categoryLaw='EMPLOYMENT LAW' imageAlt='employment law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/personal-injury-law_hwmvya.png' />
+          <LawCard categoryLaw='PERSONAL INJURY LAW' imageAlt='personal injury law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/employment-law_h2np1d.png' />
+        </ContLawCard>
+        <WelcomeSection />
+      </div>
       <CallToAction
         direction='ltr'
         color='black'
