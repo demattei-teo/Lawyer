@@ -9,12 +9,10 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         fit: 'repeat(auto-fit, minmax(15rem, 1fr))'
-
       },
       fontSize: {
         'fluid-3xl': 'clamp(2rem, 4vw, 4rem)',
         'fluid-2xl': 'clamp(1rem, 1.5vw, 2rem)'
-
       },
       colors: {
         brown: {
@@ -37,8 +35,8 @@ module.exports = {
       },
       animation: {
         'mask-left': 'mask-left 1000ms linear forwards',
-        marquee: 'marquee 25000ms linear infinite',
-        marquee2: 'marquee2 25000ms linear infinite'
+        marquee: 'marquee 30000ms linear infinite',
+        marquee2: 'marquee2 30000ms linear infinite'
       },
       keyframes: {
         'mask-left': {
