@@ -3,9 +3,7 @@ interface Props {
 }
 
 function ContLawCard({ children }: Props) {
-  return (
-    <ul className='grid p-4 gap-6 min-[596px]:grid-cols-3 lg:px-24 lg:py-12 lg:gap-16'>{children}</ul>
-  )
+  return <ul className='grid gap-6 p-8 py-32 md:grid-cols-3 lg:gap-10 lg:px-24'>{children}</ul>
 }
 
 export default ContLawCard
