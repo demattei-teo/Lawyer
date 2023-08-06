@@ -36,7 +36,7 @@ export const metadata = {
     { name: 'David', url: 'https://www.linkedin.com/in/davidmedev' },
     { name: 'Josh', url: 'https://www.linkedin.com/in/teo-demattei-63a744261' }
   ],
-  colorScheme: 'light dark',
+  colorScheme: 'normal',
   creator: 'David & Mateo',
   publisher: 'David & Mateo',
   category: 'legal',
