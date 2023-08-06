@@ -9,4 +9,3 @@ export { default as ContLawCard } from './law-card/ContLawCard'
 export { default as LawCard } from './law-card/LawCard'
 export { default as MarqueeText } from './marquee/MarqueeText'
 export { default as WelcomeSection } from './welcome/WelcomeSection'
-
