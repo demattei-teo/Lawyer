@@ -16,6 +16,7 @@ function LawCard({ categoryLaw, imageSrc, imageAlt }: Props) {
         className='w-40 object-cover transition-transform duration-500 group-hover:scale-110'
         fill
         blurDataURL={brownBlurDataURL}
+        sizes='(max-width: 768px) 90vw, 33vw'
         placeholder='blur'
       />
       <h4 className='z-10 text-center text-fluid-2xl font-semibold text-white'>{categoryLaw}</h4>

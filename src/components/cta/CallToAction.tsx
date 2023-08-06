@@ -48,6 +48,7 @@ function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
           src={photoURL}
           alt='reunion de abogado con cliente'
           blurDataURL={brownBlurDataURL}
+          sizes='(max-width: 1024px) 90vw, 50vw'
           placeholder='blur'
           fill
         />

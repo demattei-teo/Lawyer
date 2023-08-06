@@ -14,6 +14,7 @@ function WelcomeSection() {
               src={welcomePhotoURL}
               alt='Abogados apoyando una causa'
               blurDataURL={brownBlurDataURL}
+              sizes='(max-width: 1024px) 0vw, 50vw'
               placeholder='blur'
               fill
             />
