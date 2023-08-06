@@ -24,7 +24,7 @@ function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
       direction === 'rtl' && 'order-2'
     ),
     picture: clsx(
-      'relative aspect-video basis-3/5 lg:translate-y-1/4',
+      'group relative aspect-video basis-3/5 overflow-hidden lg:translate-y-1/4',
       direction === 'ltr' && 'order-2',
       direction === 'rtl' && 'order-1'
     )
@@ -44,10 +44,11 @@ function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
       </div>
       <div className={classes.picture}>
         <Image
-          className='object-cover object-center'
+          className='object-cover object-center transition-transform duration-500 group-hover:scale-110'
           src={photoURL}
           alt='reunion de abogado con cliente'
           blurDataURL={brownBlurDataURL}
+          sizes='(max-width: 1024px) 90vw, 50vw'
           placeholder='blur'
           fill
         />
