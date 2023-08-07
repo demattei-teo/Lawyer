@@ -1,9 +1,9 @@
-import { BannerSection, CallToAction, ContLawCard, LawCard, WelcomeSection } from '@/components'
+import { BannerSection, CallToAction, ContContact, ContLawCard, LawCard, WelcomeSection } from '@/components'
 import { cta2PhotoURL, cta3PhotoURL, ctaPhotoURL } from '@/constants'
 
 function HomePage() {
   return (
-    <main>
+    <main className='gap-6 lg:gap-12'>
       <BannerSection />
       <div className='welcome-background bg-cover'>
         <ContLawCard>
@@ -38,6 +38,7 @@ function HomePage() {
         title='Personal Injury Law'
         paragraph='Personal injury law is the area of law that deals with injuries caused by the negligence or wrongdoing of others. Our personal injury attorneys at Buchannan & Morgan are dedicated to helping clients who have been injured in accidents, including car accidents, slip and falls, and medical malpractice.'
       />
+      <ContContact />
     </main>
   )
 }
