@@ -6,15 +6,15 @@ interface Props {
   secondParagraph?: string
 }
 
-function ContFooter({ title, firstParagraph, secondParagraph }: Props) {
+function ParagraphFooter({ title, firstParagraph, secondParagraph }: Props) {
   const classes = {
-    cont: clsx('flex flex-col gap-2  p-2 text-white  md:justify-self-center'),
+    wrapper: clsx('flex flex-col gap-2  p-2 text-white  md:justify-self-center'),
     title: clsx('text-xl font-medium md:text-center'),
     paragraph: clsx('w-4/5 text-lg md:w-full md:text-center')
   }
 
   return (
-    <div className={classes.cont}>
+    <div className={classes.wrapper}>
       <h4 className={classes.title}>{title}</h4>
       {firstParagraph !== undefined && <p className={classes.paragraph}>{firstParagraph}</p>}
       {secondParagraph !== undefined && <p>{secondParagraph}</p>}
@@ -22,4 +22,4 @@ function ContFooter({ title, firstParagraph, secondParagraph }: Props) {
   )
 }
 
-export default ContFooter
+export default ParagraphFooter

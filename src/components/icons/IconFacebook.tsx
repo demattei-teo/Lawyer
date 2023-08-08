@@ -1,8 +1,10 @@
 import clsx from 'clsx'
-export default function IconFacebook() {
+
+function IconFacebook() {
   const classes = {
     icon: clsx('cursor-pointer transition duration-300 ease-in-out hover:scale-[1.3]')
   }
+
   return (
     <svg
       className={classes.icon}
@@ -21,3 +23,5 @@ export default function IconFacebook() {
     </svg>
   )
 }
+
+export default IconFacebook
