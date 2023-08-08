@@ -1,4 +1,11 @@
-import { BannerSection, CallToAction, ContLawCard, LawCard, WelcomeSection } from '@/components'
+import {
+  BannerSection,
+  CallToAction,
+  LawCard,
+  WelcomeSection,
+  WrapperContact,
+  WrapperLawCard
+} from '@/components'
 import { cta2PhotoURL, cta3PhotoURL, ctaPhotoURL } from '@/constants'
 
 function HomePage() {
@@ -6,11 +13,23 @@ function HomePage() {
     <main>
       <BannerSection />
       <div className='welcome-background bg-cover'>
-        <ContLawCard>
-          <LawCard categoryLaw='FAMILY LAW' imageAlt='family law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/family-law_uhqiuv.png' />
-          <LawCard categoryLaw='EMPLOYMENT LAW' imageAlt='employment law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/personal-injury-law_hwmvya.png' />
-          <LawCard categoryLaw='PERSONAL INJURY LAW' imageAlt='personal injury law' imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/employment-law_h2np1d.png' />
-        </ContLawCard>
+        <WrapperLawCard>
+          <LawCard
+            categoryLaw='FAMILY LAW'
+            imageAlt='family law'
+            imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/family-law_uhqiuv.png'
+          />
+          <LawCard
+            categoryLaw='EMPLOYMENT LAW'
+            imageAlt='employment law'
+            imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/personal-injury-law_hwmvya.png'
+          />
+          <LawCard
+            categoryLaw='PERSONAL INJURY LAW'
+            imageAlt='personal injury law'
+            imageSrc='https://res.cloudinary.com/dadpdkkq9/image/upload/v1691103810/lawyer/employment-law_h2np1d.png'
+          />
+        </WrapperLawCard>
         <WelcomeSection />
       </div>
       <CallToAction
@@ -38,6 +57,7 @@ function HomePage() {
         title='Personal Injury Law'
         paragraph='Personal injury law is the area of law that deals with injuries caused by the negligence or wrongdoing of others. Our personal injury attorneys at Buchannan & Morgan are dedicated to helping clients who have been injured in accidents, including car accidents, slip and falls, and medical malpractice.'
       />
+      <WrapperContact />
     </main>
   )
 }

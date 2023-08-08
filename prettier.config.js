@@ -8,7 +8,7 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
   insertPragma: false,
   jsxSingleQuote: true,
-  proseWrap: 'preserve',
+  proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
   semi: false,

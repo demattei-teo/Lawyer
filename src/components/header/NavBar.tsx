@@ -7,15 +7,21 @@ interface Props {
 
 function NavBar({ stateNavbar }: Props) {
   const classes = {
-    nav: clsx('flex items-center self-center h-0 -z-10 opacity-0 transition-[height,opacity,transform] duration-500 ease-in-out overflow-hidden -translate-y-1 md:h-auto md:z-10 md:opacity-100 md:items-center md:justify-center md:px-2', stateNavbar && 'h-12 opacity-100 z-10 translate-y-0'),
+    wrapper: clsx(
+      '-z-10 flex h-0 -translate-y-1 items-center self-center overflow-hidden opacity-0 transition-[height,opacity,transform] duration-500 ease-in-out md:z-10 md:h-auto md:items-center md:justify-center md:px-2 md:opacity-100',
+      stateNavbar && 'z-10 h-12 translate-y-0 opacity-100'
+    ),
 
-    ul: clsx('flex overflow-hidden self-end items-center gap-4 md:gap-7'),
+    ul: clsx('flex items-center gap-4 self-end overflow-hidden md:gap-7'),
 
-    links: clsx('text-sm text-center self-center text-white opacity-0 transition duration-1000 ease-in-out hover:text-brown-500 md:opacity-100 md:text-base', stateNavbar && 'opacity-100')
+    links: clsx(
+      'self-center text-center text-sm text-white opacity-0 transition duration-1000 ease-in-out hover:text-brown-500 md:text-base md:opacity-100',
+      stateNavbar && 'opacity-100'
+    )
   }
 
   return (
-    <nav className={classes.nav}>
+    <nav className={classes.wrapper}>
       <ul className={classes.ul}>
         <li className={classes.links}>
           <Link href='#'>Home</Link>
