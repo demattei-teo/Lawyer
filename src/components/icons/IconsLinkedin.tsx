@@ -1,9 +1,10 @@
 import clsx from 'clsx'
 
-export default function IconsLinkedin() {
+function IconsLinkedin() {
   const classes = {
     icon: clsx('cursor-pointer transition duration-300 ease-in-out hover:scale-[1.3]')
   }
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -26,3 +27,5 @@ export default function IconsLinkedin() {
     </svg>
   )
 }
+
+export default IconsLinkedin

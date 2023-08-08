@@ -1,9 +1,10 @@
 import clsx from 'clsx'
 
-export default function IconTwitter() {
+function IconTwitter() {
   const classes = {
     icon: clsx('cursor-pointer transition duration-300 ease-in-out hover:scale-[1.3]')
   }
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -22,3 +23,5 @@ export default function IconTwitter() {
     </svg>
   )
 }
+
+export default IconTwitter

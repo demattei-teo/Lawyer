@@ -1,4 +1,4 @@
-import { Header, MarqueeText } from '@/components'
+import { Footer, Header, MarqueeText } from '@/components'
 import '@/styles/globals.css'
 
 export const metadata = {
@@ -67,6 +67,7 @@ function RootLayout({ children }: Props) {
         <MarqueeText />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
