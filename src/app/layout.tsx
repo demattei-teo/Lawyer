@@ -63,7 +63,7 @@ interface Props {
 function RootLayout({ children }: Props) {
   return (
     <html lang='en'>
-      <body className='2xl:mx-auto 2xl:max-w-screen-2xl'>
+      <body className='overflow-x-hidden 2xl:mx-auto 2xl:max-w-screen-2xl'>
         <MarqueeText />
         <Header />
         {children}

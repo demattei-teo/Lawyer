@@ -1,4 +1,7 @@
+'use client'
+
 import { brownBlurDataURL } from '@/constants'
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Button from '../button/Button'
@@ -12,6 +15,7 @@ interface Props {
 }
 
 function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
+  const [targetRef, isVisible] = useIntersectionObserver(0.5)
   const classes = {
     section: clsx(
       'relative my-32 p-8 max-lg:space-y-14 lg:flex lg:items-center lg:gap-10',
@@ -23,18 +27,20 @@ function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
       direction === 'ltr' && 'order-1',
       direction === 'rtl' && 'order-2'
     ),
+    title: clsx('text-4xl font-extrabold opacity-0', isVisible && 'animate-fade-up opacity-100'),
+    paragraph: clsx('text-base opacity-0', isVisible && ' animate-fade-up opacity-100'),
     picture: clsx(
-      'group relative aspect-video basis-3/5 overflow-hidden lg:translate-y-1/4',
+      'first-letter group relative aspect-video basis-3/5 overflow-hidden lg:translate-y-1/4',
       direction === 'ltr' && 'order-2',
       direction === 'rtl' && 'order-1'
     )
   }
 
   return (
-    <section className={classes.section}>
+    <section ref={targetRef} className={classes.section}>
       <div className={classes.info}>
-        <h3 className='text-4xl font-extrabold'>{title}</h3>
-        <p className='text-base'>{paragraph}</p>
+        <h3 className={classes.title}>{title}</h3>
+        <p className={classes.paragraph}>{paragraph}</p>
         <Button
           className='absolute bottom-5 left-1/2 z-10 -translate-x-1/2 lg:static lg:translate-x-0'
           sizes='sm'
@@ -56,5 +62,4 @@ function CallToAction({ direction, title, paragraph, color, photoURL }: Props) {
     </section>
   )
 }
-
 export default CallToAction

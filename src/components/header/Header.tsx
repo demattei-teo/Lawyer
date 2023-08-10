@@ -1,13 +1,13 @@
 'use client'
 
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
 import { IconClose, IconMenu, NavBar } from '..'
-
 function Header() {
+  const [targetRef, isVisible] = useIntersectionObserver(0.5)
   const [openNavbar, setOpenNavbar] = useState(false)
-
   function changeStateNavbar() {
     setOpenNavbar(!openNavbar)
   }
@@ -17,14 +17,17 @@ function Header() {
     contResponsive: clsx(
       'col-span-full grid flex-grow items-center [grid-template-areas:"logo_icons"]'
     ),
-    image: clsx('relative z-20 h-10 w-40 [grid-area:logo]'),
+    image: clsx(
+      'relative z-20 h-10 w-40 opacity-0 [grid-area:logo]',
+      isVisible && 'animate-fade-right opacity-100'
+    ),
     contIcons: clsx(
       'grid self-center justify-self-end overflow-hidden  [grid-template-areas:"icons"] md:hidden'
     )
   }
 
   return (
-    <header className={classes.header}>
+    <header ref={targetRef} className={classes.header}>
       <div className={classes.contResponsive}>
         <div className={classes.image}>
           <Image
@@ -40,7 +43,7 @@ function Header() {
           <IconClose stateNavbar={openNavbar} />
         </div>
       </div>
-      <NavBar stateNavbar={openNavbar} />
+      <NavBar stateNavbar={openNavbar} valueStateAnimation={isVisible} />
     </header>
   )
 }
