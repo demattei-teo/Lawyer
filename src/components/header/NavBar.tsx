@@ -3,13 +3,15 @@ import Link from 'next/link'
 
 interface Props {
   stateNavbar: boolean
+  valueStateAnimation: boolean
 }
 
-function NavBar({ stateNavbar }: Props) {
+function NavBar({ stateNavbar, valueStateAnimation }: Props) {
   const classes = {
     wrapper: clsx(
-      '-z-10 flex h-0 -translate-y-1 items-center self-center overflow-hidden opacity-0 transition-[height,opacity,transform] duration-500 ease-in-out md:z-10 md:h-auto md:items-center md:justify-center md:px-2 md:opacity-100',
-      stateNavbar && 'z-10 h-12 translate-y-0 opacity-100'
+      '-z-10 flex h-0 -translate-y-1 items-center self-center overflow-hidden opacity-0 transition-[height,opacity,transform] duration-500 ease-in-out md:z-10 md:h-auto md:items-center md:justify-center md:px-2',
+      stateNavbar && 'z-10 h-12 translate-y-0 opacity-100',
+      valueStateAnimation && 'animate-fade-up opacity-100'
     ),
 
     ul: clsx('flex items-center gap-4 self-end overflow-hidden md:gap-7'),
