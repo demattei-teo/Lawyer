@@ -2,11 +2,13 @@ import clsx from 'clsx'
 import { Hours } from '..'
 import IconsSocialMedia from '../icon-social-media/IconsSocialMedia'
 
-function OfficeTime() {
+interface Props {
+  valueStateAnimation: boolean
+}
+
+function OfficeTime({ valueStateAnimation }: Props) {
   const classes = {
-    wrapper: clsx(
-      'flex flex-col items-center  gap-20 bg-brown-400/70 py-20 text-center text-white'
-    ),
+    wrapper: clsx('flex flex-col items-center gap-20 bg-brown-400/70 py-20 text-center text-white'),
     title: clsx('text-3xl font-semibold'),
     subtitle: clsx('text-base font-medium'),
     wrapperSocialMedia: clsx('flex flex-col gap-2')
